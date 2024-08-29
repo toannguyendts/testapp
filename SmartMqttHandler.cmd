@@ -1,0 +1,1 @@
+dapr run --components-path="./config/dapr/components" --app-id="pub-server-app" --app-port="8080" php yii server/start

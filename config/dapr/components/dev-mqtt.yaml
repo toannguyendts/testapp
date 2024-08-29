@@ -1,0 +1,19 @@
+apiVersion: dapr.io/v1alpha1
+kind: Component
+metadata:
+  name: dev-mqtt
+  namespace: default
+spec:
+  type: pubsub.mqtt
+  version: v1
+  metadata:
+  - name: url
+    value: "tcp://emqtt.srv01.dtsmart.dev:13883"
+  - name: qos
+    value: 1
+  - name: retain
+    value: "false"
+  - name: cleanSession
+    value: "true"
+  - name: backOffMaxRetries
+    value: "2"
